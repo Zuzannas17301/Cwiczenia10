@@ -27,13 +27,13 @@ namespace Cwiczenia10.Controllers
          return Ok( await service.GetStudents());
         }
 
-        [HttpPut("modify")]
+        [HttpPut()]
         public async Task<IActionResult> UpdateStudentInfo(ModifyStudentRequest request)
         {
             return Ok(await service.ModifyStudent(request));
         }
 
-       [HttpDelete("index")]
+       [HttpDelete()]
         public async Task<IActionResult> DeleteStudent(DeleteStudentRequest request)
         {
             return Ok(await service.DeleteStudent(request));
